@@ -20,7 +20,7 @@ const Profile = () => {
   const user = data?.me || data?.user || {};
 
   // redirect to personal profile page if username is the logged-in user's
-if (Auth.loggedIn() && Auth.getProfile().data.username.toLowerCase() === userParam.toLowerCase()) {
+if (Auth.loggedIn() && Auth.getProfile().data.username.toLowerCase() === userParam?.toLowerCase()) {
   return <Redirect to="/profile" />;
 }
 
